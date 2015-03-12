@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product_id: 1
+  picture: MyString
+  quantity: 9.99
+  purchased: false
+  belongs_to: 
+  belongs_to: 
+
+two:
+  product_id: 1
+  picture: MyString
+  quantity: 9.99
+  purchased: false
+  belongs_to: 
+  belongs_to: 
