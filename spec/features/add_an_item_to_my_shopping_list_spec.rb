@@ -22,6 +22,8 @@ describe "Adding an item to my shopping list" do
   end
 
   it 'does a thing' do
-
+    fill_in 'Search', with: 'Butter'
+    click_button 'Add to list'
+    expect(User.last.items_in_shopping_list.size).to eq 1
   end
 end
