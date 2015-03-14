@@ -1,5 +1,5 @@
 class SearchController < ApplicationController
   def search
-    render json: SearchCountdown.for(params[:search])
+    @products = SearchCountdown.for(params[:search])
   end
 end
