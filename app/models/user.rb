@@ -5,8 +5,4 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :items
-
-  def items_in_shopping_list
-    items.where(:purchased => false)
-  end
 end

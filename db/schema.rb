@@ -17,8 +17,10 @@ ActiveRecord::Schema.define(version: 20150312054758) do
   enable_extension "plpgsql"
 
   create_table "items", force: :cascade do |t|
+    t.string   "name"
     t.integer  "product_id"
-    t.string   "picture"
+    t.string   "image_url"
+    t.decimal  "price"
     t.decimal  "quantity"
     t.boolean  "purchased"
     t.integer  "user_id"

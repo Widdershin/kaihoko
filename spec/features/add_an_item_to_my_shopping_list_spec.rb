@@ -9,6 +9,7 @@ describe "Adding an item to my shopping list" do
     fill_in 'Email', with: email
     fill_in 'Password', with: password
     click_button 'Log in'
+    expect(current_path).to eq '/'
   end
 
   before do
@@ -25,7 +26,7 @@ describe "Adding an item to my shopping list" do
     fill_in 'Search', with: 'Butter'
     click_button 'Search'
     expect(page).to have_content 'Butter'
-    click_button 'Add to list'
-    expect(User.last.items_in_shopping_list.size).to eq 1
+    first(:button, 'Add to list').click
+    expect(User.last.items.in_shopping_list.size).to eq 1
   end
 end
