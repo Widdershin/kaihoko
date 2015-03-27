@@ -1,0 +1,14 @@
+<div class="items">
+  <% items.each do |item| %>
+    <div class="item">
+      <%= item.name %></br>
+      <%= number_to_currency(item.price) %></br>
+      <%= image_tag(item.image_url) %>
+
+      <%= form_tag 'items#create' do %>
+        <%= hidden_field_tag :item, item.to_json %>
+        <%= submit_tag 'Add to list' %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
